@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unmesh Achar - Computer Engineering Graduate</title>
+    <!-- ENHANCEMENT: retro style - Using a single CSS file -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323:wght@400&family=Press+Start+2P:wght@400&family=Share+Tech+Mono:wght@400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="crt">
+    <div class="scanline"></div>
+    <div class="noise"></div>
+    
+    <!-- ENHANCEMENT: retro style - Enhanced audio elements for UI sounds -->
+    <audio id="audio-click" preload="auto">
+        <source src="data:audio/wav;base64,UklGRoABAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YVwBAAC4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4" type="audio/wav">
+    </audio>
+    <audio id="audio-keypress" preload="auto">
+        <source src="data:audio/wav;base64,UklGRoABAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YVwBAAC4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4" type="audio/wav">
+    </audio>
+    <audio id="audio-hover" preload="auto">
+        <source src="data:audio/wav;base64,UklGRoABAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YVwBAAC4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4" type="audio/wav">
+    </audio>
+    <audio id="audio-boot" preload="auto">
+        <source src="data:audio/wav;base64,UklGRoABAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YVwBAAC4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4" type="audio/wav">
+    </audio>
+    
+    <div class="terminal-wrapper">
+        <div class="terminal">
+            <header class="terminal-header">
+                <div class="header-buttons">
+                    <span class="button red"></span>
+                    <span class="button yellow"></span>
+                    <span class="button green"></span>
+                </div>
+                <div class="header-title">
+                    <i class="fas fa-terminal"></i> 
+                    <span class="typing-effect">Unmesh Achar - Portfolio Terminal</span>
+                    <span class="cursor">_</span>
+                </div>
+                <div class="header-status">
+                    <span class="status-indicator online"></span>
+                    <span class="status-text">ONLINE</span>
+                </div>
+            </header>
+
+            <main class="terminal-body">
+                <nav class="terminal-nav">
+                    <a href="#home" class="nav-link active" data-section="home"><i class="fas fa-home"></i> Home</a>
+                    <a href="#about" class="nav-link" data-section="about"><i class="fas fa-user"></i> About</a>
+                    <a href="#education" class="nav-link" data-section="education"><i class="fas fa-graduation-cap"></i> Education</a>
+                    <a href="#toolbox" class="nav-link" data-section="toolbox"><i class="fas fa-tools"></i> Toolbox</a>
+                    <a href="#projects" class="nav-link" data-section="projects"><i class="fas fa-code"></i> Projects</a>
+                    <a href="#experience" class="nav-link" data-section="experience"><i class="fas fa-briefcase"></i> Experience</a>
+                    <a href="#publications" class="nav-link" data-section="publications"><i class="fas fa-book"></i> Publications</a>
+                    <a href="#contact" class="nav-link" data-section="contact"><i class="fas fa-envelope"></i> Contact</a>
+                </nav>
+
+                <section id="home" class="terminal-content active">
+                    <!-- VINTAGE COMPUTER BOOT SEQUENCE -->
+                    <div class="vintage-boot-sequence">
+                        <div class="boot-header">
+                            <div class="system-info">UNMESH-TECH PROFESSIONAL WORKSTATION v2.1</div>
+                            <div class="copyright">Copyright (C) 1981-2025 Unmesh Technologies Inc.</div>
+                        </div>
+                        
+                        <div class="system-check">
+                            <div class="check-line">MEMORY TEST....................[OK]</div>
+                            <div class="check-line">CPU INITIALIZATION.............[OK]</div>
+                            <div class="check-line">AI NEURAL NETWORK..............[OK]</div>
+                            <div class="check-line">LOADING PORTFOLIO DATA.........[OK]</div>
+                            <div class="check-line">ESTABLISHING NETWORK...........[OK]</div>
+                            <div class="check-line">SYSTEM READY FOR OPERATION.....[OK]</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ascii-art">
+                        <pre class="ascii-welcome">
+  _   _       _                      _          _   _            
+ | | | | ___ | | ___  _ __ ___   ___| |__   ___| |_| |_ ___ _ __ 
+ | | | |/ _ \| |/ _ \| '_ ` _ \ / _ \ '_ \ / _ \ __| __/ _ \ '__|
+ | |_| | (_) | | (_) | | | | | |  __/ | | |  __/ |_| ||  __/ |   
+  \___/ \___/|_|\___/|_| |_| |_|\___|_| |_|\___|\__|\__\___|_|   
+                        </pre>
+                    </div>
+
+                    <div class="intro-section">
+                        <p class="intro-text"><span class="prompt">&gt;</span><span class="typewriter">Hello, I'm <span class="highlight">Unmesh Achar</span></span></p>
+                        <p class="intro-text"><span class="prompt">&gt;</span><span class="typewriter delay-1">Computer Engineering Graduate Student</span></p>
+                        <p class="intro-text"><span class="prompt">&gt;</span><span class="typewriter delay-2">Building AI systems that matter</span></p>
+                    </div>
+
+                    <div class="terminal-input-section">
+                        <div class="terminal-input-line">
+                            <span class="prompt">&gt;</span>
+                            <input type="text" id="terminal-input" class="terminal-input" placeholder="Type 'help' for commands..." autocomplete="off">
+                        </div>
+                        <div id="terminal-output" class="terminal-output"></div>
+                    </div>
+                </section>
+
+
+                <section id="about" class="terminal-content">
+                    <h2 class="section-header"><span class="section-brackets">[ </span><span class="section-title">About Me</span><span class="section-brackets"> ]</span></h2>
+                    <div class="about-container">
+                        <div class="profile-section">
+                            <div class="profile-photo-container">
+                                <div class="photo-frame">
+                                    <img src="profile-photo.jpg" alt="Unmesh Achar" class="profile-photo">
+                                    <div class="photo-overlay"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-content">
+                            <div class="about-text">
+                                <p class="terminal-paragraph"><span class="prompt">&gt;</span>I'm a Computer Engineering graduate student at New York University with a strong background in Machine Learning, Computer Vision, and AI research. My work focuses on developing clinically validated AI systems for medical diagnosis and real-world applications.</p>
+                                <p class="terminal-paragraph"><span class="prompt">&gt;</span>I have published research in Nature Scientific Reports and contributed to cutting-edge projects in dermatology AI, achieving 99.43% accuracy in psoriasis detection systems.</p>
+                                <p class="terminal-paragraph"><span class="prompt">&gt;</span>When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and staying up-to-date with the latest advancements in AI and machine learning.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats-section">
+                        <div class="about-stats">
+                            <div class="stat-card"><div class="stat-header">NYU GPA</div><div class="stat-value">3.83</div><div class="stat-bar"><div class="stat-fill" style="width: 95.75%"></div></div></div>
+                            <div class="stat-card"><div class="stat-header">Publications</div><div class="stat-value">2</div><div class="stat-bar"><div class="stat-fill" style="width: 100%"></div></div></div>
+                            <div class="stat-card"><div class="stat-header">Major Projects</div><div class="stat-value">5+</div><div class="stat-bar"><div class="stat-fill" style="width: 85%"></div></div></div>
+                            <div class="stat-card"><div class="stat-header">Years Experience</div><div class="stat-value">3+</div><div class="stat-bar"><div class="stat-fill" style="width: 75%"></div></div></div>
+                        </div>
+                    </div>
+                    <div class="live-activity">
+                        <h3 class="subsection-header"><i class="fas fa-chart-line"></i> Live Activity <span class="status-indicator pulse"></span></h3>
+                        <div class="live-stats-grid">
+                            <div class="stats-card github-card" id="github-stats">
+                                <div class="card-header"><i class="fab fa-github"></i><h4>GitHub Stats (@Unmesh30)</h4></div>
+                                <div class="stats-content">
+                                    <div class="stat-row"><span class="stat-label">&gt;Public Repos:</span><span class="stat-value" id="github-repos">--</span></div>
+                                    <div class="stat-row"><span class="stat-label">&gt;Followers:</span><span class="stat-value" id="github-followers">--</span></div>
+                                    <div class="stat-row"><span class="stat-label">&gt;Total Stars:</span><span class="stat-value" id="github-stars">--</span></div>
+                                    <div class="stat-row"><span class="stat-label">&gt;Commits (2025):</span><span class="stat-value" id="github-commits">--</span></div>
+                                </div>
+                            </div>
+                            <div class="stats-card leetcode-card" id="leetcode-stats">
+                                <div class="card-header"><i class="fas fa-code"></i><h4>LeetCode Stats (@UnmeshXD)</h4></div>
+                                <div class="stats-content">
+                                    <div class="stat-row"><span class="stat-label">&gt;Problems Solved:</span><span class="stat-value" id="leetcode-total">--</span></div>
+                                    <div class="stat-row easy"><span class="stat-label">&gt;Easy:</span><span class="stat-value" id="leetcode-easy">--</span></div>
+                                    <div class="stat-row medium"><span class="stat-label">&gt;Medium:</span><span class="stat-value" id="leetcode-medium">--</span></div>
+                                    <div class="stat-row hard"><span class="stat-label">&gt;Hard:</span><span class="stat-value" id="leetcode-hard">--</span></div>
+                                </div>
+                                <div class="recent-activities-section">
+                                    <h5 class="activities-header">&gt;Recent Activities</h5>
+                                    <div class="activities-list" id="leetcode-activities">
+                                        <div class="activity-loading">Loading recent activities...</div>
+                                    </div>
+                                </div>
+                                <div class="card-links"><a href="https://leetcode.com/u/UnmeshXD/" target="_blank" class="leetcode-link"><i class="fas fa-external-link-alt"></i> View Profile</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section id="education" class="terminal-content">
+                    <h2 class="section-header"><span class="section-brackets">[ </span><span class="section-title">Education</span><span class="section-brackets"> ]</span></h2>
+                    <div class="education-timeline">
+                        <div class="education-item">
+                            <div class="education-marker"></div>
+                            <div class="education-content">
+                                <h3 class="education-title"><i class="fas fa-graduation-cap"></i> Master's in Computer Engineering</h3>
+                                <div class="education-details"><p class="institution">New York University</p><p class="duration">09/2024 - 05/2026</p><p class="gpa">GPA: <span class="highlight">3.833/4.0</span></p></div>
+                            </div>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-marker"></div>
+                            <div class="education-content">
+                                <h3 class="education-title"><i class="fas fa-graduation-cap"></i> Bachelor's in Computer Science and Engineering</h3>
+                                <div class="education-details"><p class="institution">Kalinga Institute of Industrial Technology</p><p class="duration">08/2020 - 06/2024</p><p class="gpa">CGPA: <span class="highlight">8.24/10</span></p></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section id="toolbox" class="terminal-content">
+                    <h2 class="section-header"><span class="section-brackets">[ </span><span class="section-title">Toolbox</span><span class="section-brackets"> ]</span></h2>
+                    <div class="skills-container">
+                        <div class="skill-category" data-category="programming"><div class="category-header"><i class="fas fa-code"></i><h3>Programming</h3></div><div class="skills-list"><span class="skill-tag">Python</span><span class="skill-tag">C++</span><span class="skill-tag">Java</span><span class="skill-tag">SQL</span><span class="skill-tag">Spark</span></div></div>
+                        <div class="skill-category" data-category="database"><div class="category-header"><i class="fas fa-database"></i><h3>Database</h3></div><div class="skills-list"><span class="skill-tag">MySQL</span><span class="skill-tag">MongoDB</span><span class="skill-tag">NoSQL</span></div></div>
+                        <div class="skill-category" data-category="ai-ml"><div class="category-header"><i class="fas fa-brain"></i><h3>AI & ML</h3></div><div class="skills-list"><span class="skill-tag">CNN</span><span class="skill-tag">Transfer Learning</span><span class="skill-tag">Computer Vision</span><span class="skill-tag">Deep Learning</span><span class="skill-tag">Neural Networks</span></div></div>
+                        <div class="skill-category" data-category="cloud"><div class="category-header"><i class="fas fa-cloud"></i><h3>Cloud & Big Data</h3></div><div class="skills-list"><span class="skill-tag">Microsoft Azure</span><span class="skill-tag">Hadoop</span><span class="skill-tag">Hive</span></div></div>
+                        <div class="skill-category" data-category="tools"><div class="category-header"><i class="fas fa-tools"></i><h3>Tools & Frameworks</h3></div><div class="skills-list"><span class="skill-tag">MediaPipe</span><span class="skill-tag">Fluidsynth</span><span class="skill-tag">CVZone</span></div></div>
+                    </div>
+                </section>
+
+
+                <section id="projects" class="terminal-content">
+                    <h2 class="section-header"><span class="section-brackets">[ </span><span class="section-title">Projects</span><span class="section-brackets"> ]</span></h2>
+                    <div class="projects-grid">
+                        <div class="project-card"><div class="project-header"><i class="fas fa-map-marked-alt"></i><h3>NYC Risk & Route Prediction Application</h3></div><p class="project-description"><span class="prompt">&gt;</span>Deployed an interactive Streamlit app with integrated GoMaps & Geopy APIs for real-time visual navigation and incident heatmaps across 200+ geozones using Random Forests (92% accuracy).</p><div class="tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">Streamlit</span><span class="tech-tag">Random Forest</span><span class="tech-tag">GoMaps API</span></div><div class="project-links"><a href="https://github.com/Unmesh30" class="project-link" target="_blank"><i class="fab fa-github"></i> View Profile</a></div></div>
+                        <div class="project-card"><div class="project-header"><i class="fas fa-user-md"></i><h3>Detection of Acne Disease Prediction</h3></div><p class="project-description"><span class="prompt">&gt;</span>Achieved 95.64% accuracy using fine-tuned MobileNet for facial acne classification. Built a Gradio-based interface for real-time inference with 90%+ validation precision.</p><div class="tech-stack"><span class="tech-tag">MobileNet</span><span class="tech-tag">Gradio</span><span class="tech-tag">CNN</span><span class="tech-tag">Computer Vision</span></div><div class="project-links"><a href="https://github.com/Unmesh30" class="project-link" target="_blank"><i class="fab fa-github"></i> View Profile</a></div></div>
+                        <div class="project-card"><div class="project-header"><i class="fas fa-brain"></i><h3>Mind Controlled Smart Home System</h3></div><p class="project-description"><span class="prompt">&gt;</span>Proposed a non-invasive BCI-powered smart home concept leveraging EEG signal acquisition and CNN-RNN modeling to detect intent and trigger IoT-based appliance control.</p><div class="tech-stack"><span class="tech-tag">BCI</span><span class="tech-tag">CNN-RNN</span><span class="tech-tag">IoT</span><span class="tech-tag">Jetson Xavier</span><span class="tech-tag">System Engineering</span></div><div class="project-links"><a href="https://drive.google.com/file/d/132OmEdXy0moUGWcoqLAEklKAbO_BIoKM/view?usp=sharing" class="project-link" target="_blank"><i class="fas fa-file-pdf"></i> View Report</a><a href="https://youtu.be/niVvKLKCf7I" class="project-link" target="_blank"><i class="fas fa-play"></i> View Overview</a></div></div>
+                        <div class="project-card"><div class="project-header"><i class="fas fa-music"></i><h3>Air-Piano: Touchless MIDI Instrument</h3></div><p class="project-description"><span class="prompt">&gt;</span>Implemented a real-time, touchless MIDI instrument using cvzone/MediaPipe hand tracking to detect finger gestures and trigger chord playback via Fluidsynth, with multi-threaded sustain logic for smooth audio output.</p><div class="tech-stack"><span class="tech-tag">MediaPipe</span><span class="tech-tag">Fluidsynth</span><span class="tech-tag">Computer Vision</span><span class="tech-tag">MIDI</span><span class="tech-tag">CVZone</span></div><div class="project-links"><a href="https://github.com/Unmesh30/Aeras-Piano" class="project-link" target="_blank"><i class="fab fa-github"></i> View Code</a></div></div>
+                        <div class="project-card"><div class="project-header"><i class="fas fa-terminal"></i><h3>Nexus Shell</h3></div><p class="project-description"><span class="prompt">&gt;</span>A complete shell implementation in C featuring command parsing, process management, and built-in commands. Demonstrates systems programming concepts and low-level process control.</p><div class="tech-stack"><span class="tech-tag">C</span><span class="tech-tag">Systems Programming</span><span class="tech-tag">Process Management</span><span class="tech-tag">Unix Shell</span></div><div class="project-links"><a href="https://github.com/Unmesh30/nexus-shell" class="project-link" target="_blank"><i class="fab fa-github"></i> View Code</a></div></div>
+                    </div>
+                </section>
+
+
+                <section id="experience" class="terminal-content">
+                    <h2 class="section-header"><span class="section-brackets">[ </span><span class="section-title">Work Experience</span><span class="section-brackets"> ]</span></h2>
+                    <div class="experience-timeline">
+                        <div class="experience-item"><div class="experience-marker"></div><div class="experience-content"><div class="experience-header"><i class="fas fa-flask"></i><h3>Research Intern</h3></div><div class="experience-details"><p class="company">National Institute of Technical Teachers' Training and Research, Kolkata</p><p class="duration">05/2023 - 07/2023</p><p class="project-title">Project: "Deep Transfer Learning for Computer-Assisted Diagnosis of Skin Psoriasis Infection"</p></div><ul class="experience-highlights"><li><span class="prompt">&gt;</span>Built a clinically validated psoriasis detection system using deep transfer learning (MobileNet, VGG16, VGG19, ResNet-50) on 893 curated image patches</li><li><span class="prompt">&gt;</span>Engineered patch-based preprocessing and image normalization workflows, optimizing model performance</li><li><span class="prompt">&gt;</span>Led cross-functional collaboration with dermatologists and AI researchers, contributing to a published Scientific Reports paper (AUC: 0.994, Acc: 99.43%)</li></ul></div></div>
+                        <div class="experience-item"><div class="experience-marker"></div><div class="experience-content"><div class="experience-header"><i class="fas fa-building"></i><h3>Nesternship Intern — AI-ML in Data Quality and Governance</h3></div><div class="experience-details"><p class="company">Nestlé India Ltd. (Indian Headquarters)</p><p class="duration">05/2025 - 07/2025</p></div><ul class="experience-highlights"><li><span class="prompt">&gt;</span>Developed a secure, branch-level order response system using Power Apps and SharePoint Lists, enforcing region-specific access and real-time validation</li><li><span class="prompt">&gt;</span>Automated ingestion of multi-sheet Excel files with Power Automate, ensuring duplicate-free updates to SharePoint via daily ID-based syncs</li><li><span class="prompt">&gt;</span>Designed email automation logic for dynamic links and attachments, improving response turnaround and reducing manual overhead by 60%</li></ul></div></div>
+                    </div>
+                </section>
+
+
+                <section id="publications" class="terminal-content">
+                    <h2 class="section-header"><span class="section-brackets">[ </span><span class="section-title">Publications</span><span class="section-brackets"> ]</span></h2>
+                    <div class="publications-list">
+                        <div class="publication-item"><div class="publication-header"><i class="fas fa-book-open"></i><h3>CAD-PsorNet: deep transfer learning for computer-assisted diagnosis of skin Psoriasis</h3></div><div class="publication-details"><p class="journal">Nature Scientific Reports</p><p class="date">November 2024</p></div><p class="publication-summary"><span class="prompt">&gt;</span>Achieved 99.43% accuracy and AUC of 0.994 with fine-tuned MobileNet on psoriasis vs. healthy skin patch classification.</p><div class="publication-links"><a href="https://www.nature.com/articles/s41598-024-76852-6" class="publication-link" target="_blank"><i class="fas fa-external-link-alt"></i> View Paper</a></div></div>
+                        <div class="publication-item"><div class="publication-header"><i class="fas fa-book-open"></i><h3>Artificial Intelligence in Dermatology: A Systematized Review</h3></div><div class="publication-details"><p class="journal">Indian Journal of Dermatology & Venereology</p><p class="date">March 2025</p></div><p class="publication-summary"><span class="prompt">&gt;</span>Analyzed 27 studies; highlighted AI's accuracy (up to 99.5%) and challenges across skin types, including bias in Fitzpatrick Type 6.</p><div class="publication-links"><a href="https://journals.lww.com/ijdv/abstract/9900/artificial_intelligence in dermatology a.152.aspx" class="publication-link" target="_blank"><i class="fas fa-external-link-alt"></i> View Paper</a></div></div>
+                    </div>
+                </section>
+
+
+                <section id="contact" class="terminal-content">
+                    <h2 class="section-header"><span class="section-brackets">[ </span><span class="section-title">Contact</span><span class="section-brackets"> ]</span></h2>
+                    <div class="contact-info">
+                        <div class="contact-item"><i class="fas fa-envelope"></i><span class="contact-label">Email:</span><a href="mailto:unmeshachar02@gmail.com" class="contact-link">unmeshachar02@gmail.com</a></div>
+                        <div class="contact-item"><i class="fas fa-phone"></i><span class="contact-label">Phone:</span><span class="contact-value">+1 (646) 592-5245</span></div>
+                        <div class="contact-item"><i class="fab fa-linkedin"></i><span class="contact-label">LinkedIn:</span><a href="https://www.linkedin.com/in/unmesh-achar-319467210/" class="contact-link" target="_blank">linkedin.com/in/unmesh-achar-319467210</a></div>
+                        <div class="contact-item"><i class="fab fa-github"></i><span class="contact-label">GitHub:</span><a href="https://github.com/Unmesh30" class="contact-link" target="_blank">github.com/Unmesh30</a></div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="terminal-footer">
+                <div class="footer-content">
+                    <p>&copy; 2025 Unmesh Achar. All rights reserved.</p>
+                    <a href="resume-unmesh-achar.pdf" class="resume-button" target="_blank"><i class="fas fa-download"></i> Download Resume</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+    <!-- ENHANCEMENT: retro style - Audio toggle button -->
+    <button id="audio-toggle" class="audio-toggle">
+        <i class="fas fa-volume-off"></i>
+    </button>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
