@@ -352,7 +352,7 @@ body {
     .function-key { justify-content: center; padding: 0.8rem; min-width: 100px; } 
     .about-container { grid-template-columns: 1fr; text-align: center; gap: 1.5rem; } 
     .about-stats { grid-template-columns: repeat(2, 1fr); gap: 1rem; } 
-    .projects-grid, .skills-container, .contact-info { grid-template-columns: 1fr; } 
+    .projects-grid, .skills-container, .contact-info, .live-stats-grid { grid-template-columns: 1fr; } 
     .education-timeline, .experience-timeline { padding-left: 1rem; } 
     .education-marker, .experience-marker { left: -31px; } 
     .footer-content { flex-direction: column; text-align: center; } 
