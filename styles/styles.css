@@ -362,7 +362,17 @@ body {
     .system-specs { align-items: center; text-align: center; }
     .function-key-row { flex-direction: column; align-items: center; }
 }
-@media (max-width: 480px) { .terminal-body { padding: 1rem; } .about-stats { grid-template-columns: 1fr; } .project-card, .publication-item { padding: 1.5rem; } .intro-text { font-size: 1.1rem; } }
+@media (max-width: 480px) {
+    .terminal-body { padding: 1rem; }
+    .about-stats { grid-template-columns: 1fr; }
+    .project-card, .publication-item { padding: 1.5rem; }
+    .intro-text { font-size: 1.1rem; }
+    .live-activity { padding: 1rem; }
+    .stats-card { padding: 1rem; }
+    .card-header h4 { font-size: 0.8rem; word-break: break-word; }
+    .stat-row { flex-wrap: wrap; justify-content: flex-start; gap: 0.5rem; }
+    .stat-label, .stat-value { font-size: 0.9rem; }
+}
 
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } .scanline, .crt::before, .noise { display: none; } }
