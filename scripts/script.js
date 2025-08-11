@@ -326,27 +326,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Animation System --- //
     function initializeAnimations() {
-        // Boot sequence animation with sound
-        const bootLines = document.querySelectorAll('.boot-line');
-        bootLines.forEach((line, index) => {
-            setTimeout(() => {
-                line.style.opacity = '1';
-                // Play keypress sound for each boot line
-                if (index === 0) playKeypressSound();
-                if (index === 1) setTimeout(() => playKeypressSound(), 100);
-                if (index === 2) setTimeout(() => playBootSound(), 200);
-            }, 500 + (index * 300));
-        });
+        const introLine1 = document.getElementById('intro-line-1');
+        const introLine2 = document.getElementById('intro-line-2');
+        const introLine3 = document.getElementById('intro-line-3');
+        const codeSnippet = document.getElementById('code-snippet');
 
-        // Typewriter effect for intro text
-        const typewriterElements = document.querySelectorAll('.typewriter');
-        typewriterElements.forEach(element => {
-            const delay = element.classList.contains('delay-1') ? 1000 :
-                         element.classList.contains('delay-2') ? 2000 : 0;
-            
-            setTimeout(() => {
-                element.style.opacity = '1';
-            }, 1500 + delay);
+        const text1 = "> Hello, I'm Unmesh Achar";
+        const text2 = "> Computer Engineering Graduate Student";
+        const text3 = "> Building AI systems that matter";
+        const codeText = `
+def get_core_skills():
+    skills = {
+        "languages": ["Python", "C++", "Java"],
+        "ai_ml": ["PyTorch", "TensorFlow", "Scikit-learn"],
+        "power_platform": ["Power Apps", "Power Automate"]
+    }
+    return skills
+`;
+
+        function typeWriter(element, text, callback) {
+            let i = 0;
+            element.innerHTML = "";
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, 50);
+                } else {
+                    if (callback) {
+                        callback();
+                    }
+                }
+            }
+            type();
+        }
+
+        typeWriter(introLine1, text1, () => {
+            typeWriter(introLine2, text2, () => {
+                typeWriter(introLine3, text3, () => {
+                    if(codeSnippet) {
+                        typeWriter(codeSnippet, codeText);
+                    }
+                });
+            });
         });
     }
 
