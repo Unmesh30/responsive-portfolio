@@ -363,13 +363,12 @@ def get_core_skills():
 
         typeWriter(introLine1, text1, () => {
             typeWriter(introLine2, text2, () => {
-                typeWriter(introLine3, text3, () => {
-                    if(codeSnippet) {
-                        typeWriter(codeSnippet, codeText);
-                    }
-                });
+                typeWriter(introLine3, text3);
             });
         });
+        if(codeSnippet) {
+            typeWriter(codeSnippet, codeText);
+        }
     }
 
     // ENHANCEMENT: retro style - Typing animation for section titles with sound
